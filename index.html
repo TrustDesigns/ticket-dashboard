@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Support Ticket Dashboard</title>
+  <link rel="stylesheet" href="tickets.css" />
+</head>
+<body>
+
+  <!-- Main Dashboard -->
+  <div class="dashboard">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Tickets</h2>
+        <button class="new-ticket">＋</button>
+      </div>
+      <div class="sidebar-search">
+        <input type="text" placeholder="Search ticket or customer..." />
+      </div>
+      <div class="sidebar-filters">
+        <button class="active">All (24)</button>
+        <button>Open (5)</button>
+        <button>Pending (3)</button>
+        <button>Resolved (16)</button>
+      </div>
+
+      <ul class="ticket-list">
+        <li class="ticket active">
+          <div class="ticket-info">
+            <h4>#TC-0001</h4>
+            <span class="customer">Emily Johnson</span>
+            <p class="summary">Request for Additional Storage...</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority high">High</span>
+            <span class="time">09:46 am</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0002</h4>
+            <span class="customer">David Newman</span>
+            <p class="summary">System Login Failure</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority medium">Medium</span>
+            <span class="time">10:08 am</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0003</h4>
+            <span class="customer">Guy Hawkins</span>
+            <p class="summary">Unable to Access Report</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority low">Low</span>
+            <span class="time">08:30 am</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0004</h4>
+            <span class="customer">Brooklyn Simmons</span>
+            <p class="summary">File Upload Error</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority medium">Medium</span>
+            <span class="time">09:10 am</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0005</h4>
+            <span class="customer">Cameron Williamson</span>
+            <p class="summary">Password Reset Request</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority low">Low</span>
+            <span class="time">Yesterday</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0006</h4>
+            <span class="customer">Esther Howard</span>
+            <p class="summary">Billing Inquiry</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority high">High</span>
+            <span class="time">Yesterday</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0007</h4>
+            <span class="customer">Jenny Wilson</span>
+            <p class="summary">Feature Request: Dark Mode</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority low">Low</span>
+            <span class="time">2 days ago</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0008</h4>
+            <span class="customer">Ronald Richards</span>
+            <p class="summary">App Crash on Startup</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority high">High</span>
+            <span class="time">2 days ago</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0009</h4>
+            <span class="customer">Kathryn Murphy</span>
+            <p class="summary">Data Sync Issue</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority medium">Medium</span>
+            <span class="time">3 days ago</span>
+          </div>
+        </li>
+        <li class="ticket">
+          <div class="ticket-info">
+            <h4>#TC-0010</h4>
+            <span class="customer">Jacob Jones</span>
+            <p class="summary">Unable to Download Invoice</p>
+          </div>
+          <div class="ticket-meta">
+            <span class="priority low">Low</span>
+            <span class="time">Last week</span>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CENTER: Conversation Section -->
+    <main class="conversation-panel">
+      <div class="ticket-header">
+        <div class="ticket-title">
+          <h3>#TC-0001</h3>
+          <p>Request for Additional Storage and Server</p>
+        </div>
+        <div class="ticket-actions">
+          <button>📞 Call</button>
+          <button>⏰ Snooze</button>
+          <button class="close">❌ Close</button>
+        </div>
+      </div>
+
+      <div class="conversation-thread">
+        <div class="message from">
+          <div class="avatar agent">R</div>
+          <div class="content">
+            <p>Hi, thanks for reaching out! I see you’re looking for additional server capacity. Can we schedule a quick assessment to find the best solution?</p>
+            <span class="timestamp">09:51 am · Via WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="message to">
+          <div class="avatar customer">E</div>
+          <div class="content">
+            <p>Yes, please. Tomorrow morning works great!</p>
+            <span class="timestamp">09:44 am · Emily Johnson</span>
+          </div>
+        </div>
+
+        <div class="message from">
+          <div class="avatar agent">R</div>
+          <div class="content">
+            <p>Perfect! I’ll arrange a meeting for 10 AM and share the link soon.</p>
+            <span class="timestamp">09:51 am · Via WhatsApp</span>
+          </div>
+        </div>
+        <div class="message to">
+          <div class="avatar customer">E</div>
+          <div class="content">
+            <p>Also, can you prioritize this ticket? We’re running low on storage.</p>
+            <span class="timestamp">09:53 am · Emily Johnson</span>
+          </div>
+        </div>
+        <div class="message from">
+          <div class="avatar agent">R</div>
+          <div class="content">
+            <p>Understood. I’ve updated the ticket priority to High. We’ll expedite the assessment.</p>
+            <span class="timestamp">09:54 am · Via WhatsApp</span>
+          </div>
+        </div>
+        <div class="message system">
+          <p>Meeting scheduled for tomorrow at 10 AM. Meeting link sent to customer.</p>
+        </div>
+        <div class="message system">
+          <p>Ticket status changed to <strong>Open</strong></p>
+        </div>
+
+        <div class="message system">
+          <p>Ticket priority updated to <strong>High</strong></p>
+        </div>
+
+        <div class="message to">
+          <div class="avatar customer">E</div>
+          <div class="content">
+            <p>Thank you! Also, could you send documentation for storage scaling?</p>
+            <span class="timestamp">09:55 am · Emily Johnson</span>
+          </div>
+        </div>
+
+        <div class="message from">
+          <div class="avatar agent">R</div>
+          <div class="content">
+            <p>Sure! Please check this article for more details: <a href="#">Scaling Server Storage – Best Practices</a></p>
+            <span class="timestamp">09:57 am · Via WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-input">
+        <textarea placeholder="Type your reply..."></textarea>
+        <button class="send">Send</button>
+      </div>
+      
+
+    </main>
+
+    <!-- RIGHT: Knowledge Base -->
+    <aside class="knowledge-base">
+      <div class="kb-header">
+        <h3>Knowledge Base</h3>
+        <input type="text" placeholder="Search articles..." />
+      </div>
+
+      <ul class="kb-list">
+        <li>
+          <div class="kb-icon">📘</div>
+          <div class="kb-info">
+            <h4>Account Creation & Management</h4>
+            <p>Last updated: Mar 17, 2022 · Article</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🛍️</div>
+          <div class="kb-info">
+            <h4>Adding Products to the Cart</h4>
+            <p>Last updated: Mar 16, 2022 · User Guide</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">💳</div>
+          <div class="kb-info">
+            <h4>Billing & Payment Methods</h4>
+            <p>Last updated: Mar 8, 2022 · FAQ</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🧾</div>
+          <div class="kb-info">
+            <h4>Applying Discount Codes</h4>
+            <p>Last updated: Mar 14, 2022 · Tutorial</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🚚</div>
+          <div class="kb-info">
+            <h4>Shipping & Delivery Policy</h4>
+            <p>Last updated: Mar 10, 2022 · Article</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🔄</div>
+          <div class="kb-info">
+            <h4>Returns & Refunds Process</h4>
+            <p>Last updated: Mar 12, 2022 · FAQ</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🔒</div>
+          <div class="kb-info">
+            <h4>Privacy & Data Protection</h4>
+            <p>Last updated: Mar 15, 2022 · Article</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">⚙️</div>
+          <div class="kb-info">
+            <h4>Troubleshooting Common Issues</h4>
+            <p>Last updated: Mar 11, 2022 · Guide</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">📞</div>
+          <div class="kb-info">
+            <h4>Contacting Customer Support</h4>
+            <p>Last updated: Mar 9, 2022 · Article</p>
+          </div>
+        </li>
+        <li>
+          <div class="kb-icon">🌐</div>
+          <div class="kb-info">
+            <h4>Using the Mobile App</h4>
+            <p>Last updated: Mar 13, 2022 · Tutorial</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</body>
+</html>
