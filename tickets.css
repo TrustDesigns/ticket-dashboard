@@ -327,9 +327,26 @@ body {
 /* Responsive Breakpoints */
 
 /* Tablet */
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    width: 280px; /* Or adjust as needed for mobile sidebar width */
+  }
+
+  .sidebar.show {
+    display: flex;
+  }
+}
+
 @media (min-width: 768px) {
   .sidebar {
     width: 280px;
+    display: flex; /* Ensure it's displayed on larger screens */
   }
   .conversation-panel {
     display: flex;
@@ -384,5 +401,24 @@ body {
   }
   .message .content {
     max-width: 90%;
+  }
+
+  .menu-button {
+    display: block;
+    background: #6a4bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+}
+
+/* Hide menu button on larger screens */
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
   }
 }
