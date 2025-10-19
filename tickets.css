@@ -9,22 +9,26 @@ body {
   background: #f4f5f9;
   color: #333;
   overflow: hidden;
+  height: 100vh;
+  display: flex;
 }
 
 /* Layout */
 .dashboard {
   display: flex;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 280px;
+  width: 100%;
   background: #fff;
   border-right: 1px solid #eee;
   display: flex;
   flex-direction: column;
   padding: 15px;
+  transition: width 0.3s ease;
 }
 
 .sidebar-header {
@@ -136,6 +140,7 @@ body {
   display: flex;
   flex-direction: column;
   background: #fff;
+  width: 100%;
 }
 
 .ticket-header {
@@ -144,6 +149,7 @@ body {
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
 .ticket-title h3 {
@@ -183,12 +189,14 @@ body {
 }
 
 .message.system {
+  justify-content: center;
   text-align: center;
   background: #efefef;
   padding: 5px;
   border-radius: 6px;
   font-size: 0.85em;
   color: #555;
+  margin: 10px 0;
 }
 
 .avatar {
@@ -208,7 +216,7 @@ body {
   background: #eae4ff;
   padding: 10px 14px;
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .message.to .content {
@@ -250,12 +258,13 @@ body {
 
 /* KNOWLEDGE BASE */
 .knowledge-base {
-  width: 320px;
+  display: none; /* Hidden by default on small screens */
+  width: 100%;
   background: #fff;
   border-left: 1px solid #eee;
-  display: flex;
   flex-direction: column;
   padding: 15px;
+  transition: width 0.3s ease;
 }
 
 .kb-header h3 {
@@ -314,37 +323,66 @@ body {
   background: #ccc;
   border-radius: 10px;
 }
-@media (max-width: 1200px) {
+
+/* Responsive Breakpoints */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 280px;
+  }
+  .conversation-panel {
+    display: flex;
+  }
   .knowledge-base {
     display: none;
   }
 }
-@media (max-width: 900px) {
+
+/* Small Desktop */
+@media (min-width: 1024px) {
   .sidebar {
-    display: none;
+    width: 280px;
+  }
+  .knowledge-base {
+    display: flex;
+    width: 320px;
   }
 }
-@media (max-width: 600px) {
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 320px;
+  }
   .conversation-panel {
-    flex: 1 1 100%;
+    flex: 1;
+  }
+  .knowledge-base {
+    width: 360px;
   }
 }
-@media (max-width: 400px) {
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
   .ticket-header {
     flex-direction: column;
     align-items: flex-start;
   }
   .ticket-actions {
     margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
-}
-@media (max-width: 350px) {
+  .ticket-actions button {
+    margin-left: 0;
+    flex: 1;
+  }
+  .ticket-actions button:not(:last-child) {
+    margin-right: 6px;
+  }
   .message .content {
-    max-width: 100%;
-  }
-  @media (max-width: 350px) {
-    .message .content {
-      max-width: 100%;
-    }
+    max-width: 90%;
   }
 }
