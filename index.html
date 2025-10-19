@@ -144,6 +144,7 @@
     <!-- CENTER: Conversation Section -->
     <main class="conversation-panel">
       <div class="ticket-header">
+        <button id="toggleSidebar" class="menu-button" aria-label="Toggle Sidebar">☰</button>
         <div class="ticket-title">
           <h3>#TC-0001</h3>
           <p>Request for Additional Storage and Server</p>
@@ -310,5 +311,26 @@
       </ul>
     </aside>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleSidebarButton = document.getElementById('toggleSidebar');
+      const sidebar = document.querySelector('.sidebar');
+
+      if (toggleSidebarButton && sidebar) {
+        toggleSidebarButton.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevent this click from immediately closing the sidebar
+          sidebar.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (event) => {
+          // If the sidebar is shown and the click is outside the sidebar and not on the toggle button
+          if (sidebar.classList.contains('show') && !sidebar.contains(event.target) && !toggleSidebarButton.contains(event.target)) {
+            sidebar.classList.remove('show');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
